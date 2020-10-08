@@ -6,12 +6,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { OrderSuccessComponent } from './components/order-success/order-success.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    OrderSuccessComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+<div class="container">
+    <div *ngIf="!isGettingCheckout">
+      $<input type="number" [(ngModel)]="paymentAmount" /> (USD)
+      <button id="checkout-button" (click)="payAmount()">Pay</button>
+    </div>
+    <div *ngIf="isGettingCheckout">
+    <div >Thank you!</div>
+    <div >Sending you to checkout...
+      <app-sbd-spinner></app-sbd-spinner>
+    </div>
+    </div>
+  </div> 

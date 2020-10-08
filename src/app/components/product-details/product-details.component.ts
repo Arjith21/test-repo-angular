@@ -3,18 +3,18 @@ import { loadStripe } from '@stripe/stripe-js';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-product-details',
+  templateUrl: './product-details.component.html',
+  styleUrls: ['./product-details.component.css']
 })
+export class ProductDetailsComponent {
 
-export class AppComponent {
   title = 'angular-app';
   paymentAmount = 10.00;
   isGettingCheckout = false;
 
   connectedAcc: string = 'acct_1HZFstKG6Elb1SM1'
-  customerId: any = 'cus_I9y8rjOEPLBeT9'//'cus_I9C8TvbCTsCoe8'
+  customerId: any = 'cus_IACqDC6VSPudux'//'cus_I9C8TvbCTsCoe8'
   productId: any = 'prod_I9y6GA0nvQw0Yi'
   priceId: any = 'price_1HZeAPKG6Elb1SM1RQ1eNqqM'
 
@@ -54,46 +54,6 @@ export class AppComponent {
       })
   }
 
-  //   stripe.redirectToCheckout({
-  //     items: [{plan: SUBSCRIPTION_BASIC_PLAN_ID, quantity: 1}],
-  //     successUrl:
-  //       'https://' +
-  //       DOMAIN +
-  //       '/success.html?session_id={CHECKOUT_SESSION_ID}',
-  //     cancelUrl: 'https://' + DOMAIN + '/canceled.html'
-  //   })
-  //     .then(this.handleResult);
-  // } catch (error) {
-  //   console.error('checkout() try catch error', error);
-  // }
 
-  // }
-
-  // *** To Do #3 of 3: Add this
-  // handleResult(result) {
-  //   console.log('handleResult()', result);
-  // }
-
-
-
-  // ngOnInit(){
-  //   //this.isGettingCheckout = true;
-
-  //   // this.stripe = loadStripe('pk_test_51HO0KCESOl6tMOVp9lRJRna9R7lU408bAnZCxpEvMqnDBmGcu0lZTEpo0i2VMXRvDkzZfMhSzA5288DqmXCKwCTD00w71tQarJ'); 
-  //   const body = {
-  //     product: '',
-  //     token:''
-  //   }
-
-  //   console.log(this.stripe);
-
-  //   const headers = {
-  //     'Content-Type': 'application/json'
-  //   }
-  //   this.http.post<any>('http://localhost:3000/create-checkout-session', body, { headers })
-  //   .subscribe(session => {
-  //     return this.stripe.redirectToCheckout({ sessionId: session.id });
-  //       })
-  // }
 
 }
